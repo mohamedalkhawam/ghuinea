@@ -57,7 +57,7 @@ registerRoute(
 
     plugins: [
       new WorkboxPlugin.InjectManifest({
-        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
+        maximumFileSizeToCacheInBytes: 50000000,
       }),
       // Ensure that once this runtime cache reaches a maximum size the
       // least-recently used images are removed.

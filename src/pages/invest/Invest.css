@@ -1,0 +1,64 @@
+.invest {
+  height: 100%;
+}
+.invest-logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1598px;
+  height: 672px;
+
+  animation: fadein-with-delay 3s;
+  -moz-animation: fadein 3s; /* Firefox */
+  -webkit-animation: fadein 3s; /* Safari and Chrome */
+  -o-animation: fadein 3s; /* Opera */
+}
+.invest-grid {
+  position: absolute;
+  right: 20vw;
+  top: 5vh;
+  width: 9.5vw;
+  height: 20vh;
+  animation: blur-element 1s linear, fadein-with-delay 0.5s;
+  -webkit-animation: blur-element 1s linear, fadein-with-delay 0.5s;
+}
+
+.invest-lines {
+  position: absolute;
+  left: 17vw;
+  bottom: 0;
+  width: 65vw;
+  height: 60vh;
+  animation: blur-element 1s linear, fadein-with-delay 0.5s;
+}
+.invest-description {
+  position: absolute;
+  right: 21vw;
+  top: 45vh;
+  width: 35vw;
+  font-family: Roboto-Bold;
+  font-size: 1.9rem;
+  text-align: center;
+  animation: blur 2s linear, fadein-with-delay 1s linear;
+  -webkit-animation: blur 2s linear, fadein-with-delay 1s linear;
+}
+
+.invest-description-small {
+  position: absolute;
+  right: 20vw;
+  top: 65vh;
+  width: 41vw;
+  font-family: Roboto-Bold;
+  font-size: 1.35rem;
+  text-align: center;
+  animation: blur 2.5s linear, fadein-with-delay 1s linear;
+}
+
+.invest-qr {
+  position: absolute;
+  left: 23vw;
+  bottom: 25.5vh;
+  width: 10vw;
+  height: auto;
+  animation: blur-element 1.5s linear, fadein-with-delay 0.5s linear;
+}

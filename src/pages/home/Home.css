@@ -1,0 +1,90 @@
+.home {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.home-grid {
+  right: 30vw;
+  width: 9.5vw;
+  top: 7vh;
+  position: absolute;
+  animation: blur-element 1s linear, fadein 0.5s;
+
+  -webkit-animation: blur-element 1s linear, fadein 0.5s linear;
+}
+.home-description {
+  color: #ffffff;
+  font-family: Code-Light;
+  animation: blur 1s linear, fadein 0.5s linear;
+  -webkit-animation: blur 1s linear, fadein 0.5s linear;
+}
+
+.home-description-item {
+  top: 45vh;
+  left: 14vw;
+
+  position: absolute;
+
+  font-size: 4.8rem;
+}
+.home-description-item-small {
+  width: 1036px;
+  height: 238px;
+  top: 55vh;
+  left: 14vw;
+  position: absolute;
+  font-size: 3.6rem;
+}
+.home-description-item-fr {
+  top: 45vh;
+  right: 14vw;
+  position: absolute;
+  font-size: 4.8rem;
+}
+.home-description-item-small-fr {
+  top: 55vh;
+  right: 14vw;
+  position: absolute;
+  font-size: 3.6rem;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.home-lang-button {
+  background: transparent;
+  border: 2px solid #7cfbbf;
+  border-radius: 100px;
+  font-family: Roboto-Regular;
+  color: #ffffff;
+  font-size: 1.3rem;
+  left: 22vw;
+  top: 70vh;
+  position: absolute;
+  animation: blur-element 2s linear, fadein-with-delay 2s linear;
+  -webkit-animation: blur-element 2s linear, fadein-with-delay 2s linear;
+}
+
+.home-lang-button-fr {
+  right: 22vw;
+  background: transparent;
+  border: 2px solid #7cfbbf;
+  border-radius: 100px;
+  font-family: Roboto-Regular;
+  color: #ffffff;
+  font-size: 1.3rem;
+  top: 70vh;
+  position: absolute;
+  animation: blur-element 2s linear, fadein-with-delay 2s linear;
+  -webkit-animation: blur-element 2s linear, fadein-with-delay 2s linear;
+}
+.home-lang-button:focus {
+  outline: none;
+  box-shadow: none;
+  user-focus: none;
+}

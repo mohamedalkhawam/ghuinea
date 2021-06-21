@@ -1,0 +1,61 @@
+.about {
+  height: 100%;
+}
+.about-grid {
+  position: absolute;
+  right: 45vw;
+  animation: fadein 5s;
+  width: 9.5vw;
+  top: 6vh;
+}
+
+.about-description {
+  font-size: 1.3rem;
+  color: #fff;
+  font-family: Roboto-Regular;
+  position: absolute;
+  left: 9vw;
+  top: 32vh;
+  width: 37vw;
+  animation: blur 1s linear, fadein-with-delay 0.5s linear;
+  -webkit-animation: blur 1s linear, fadein-with-delay 0.5s linear;
+}
+.about-industry-btn {
+  width: 26vw;
+  height: 9vh;
+  background: transparent;
+  border: 2px solid #7cfbbf;
+  border-radius: 100px;
+  font-size: 2.3rem;
+  font-family: Code-Light;
+  color: #ffffff;
+  position: absolute;
+  outline: none;
+  box-shadow: none;
+  user-focus: none;
+}
+
+.tourism-btn {
+  right: 6vw;
+  top: 25vh;
+  animation: blur-element 1s ease-out, fadein-with-delay 1s ease-out;
+  -webkit-animation: blur-element 1s ease-out, fadein-with-delay 1s ease-out;
+}
+.energy-btn {
+  right: 11vw;
+  top: 40vh;
+  animation: blur-element 2s ease-out, fadein-with-delay 2s ease-out;
+  -webkit-animation: blur-element 2s ease-out, fadein-with-delay 2s ease-out;
+}
+.infra-btn {
+  right: 17vw;
+  top: 55vh;
+  animation: blur-element 3s ease-out, fadein-with-delay 3s ease-out;
+  -webkit-animation: blur-element 3s ease-out, fadein-with-delay 3s ease-out;
+}
+.agriculture-btn {
+  right: 22vw;
+  top: 70vh;
+  animation: blur-element 4s ease-out, fadein-with-delay 4s ease-out;
+  -webkit-animation: blur-element 4s ease-out, fadein-with-delay 4s ease-out;
+}

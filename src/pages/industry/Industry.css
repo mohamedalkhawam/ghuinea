@@ -1,0 +1,126 @@
+industry {
+  height: 100%;
+}
+.industry-grid {
+  position: absolute;
+  left: 24.5vw;
+  top: 7vh;
+  width: 9.5vw;
+  height: 20vh;
+  animation: blur-element 1s linear, fadein-with-delay 0.5s linear;
+  -webkit-animation: blur-element 1s linear, fadein-with-delay 0.5s linear;
+}
+.industry-lines {
+  position: absolute;
+  left: 9.5vw;
+  top: 13vh;
+  width: 79vw;
+  height: 70vh;
+  animation: blur-element 1s linear, fadein-with-delay 0.5s linear;
+  -webkit-animation: blur-element 1s linear, fadein-with-delay 0.5s linear;
+}
+.industry-title {
+  font-size: 3rem;
+  position: absolute;
+  left: 17vw;
+  top: 39vh;
+  font-family: Code-Light;
+  animation: blur-element 1s linear, fadein-with-delay 0.5s linear;
+  -webkit-animation: blur-element 1s linear, fadein-with-delay 0.5s linear;
+}
+.industry-title-infrastructure {
+  font-size: 2rem;
+  left: 17vw;
+}
+.industry-title-energy {
+  left: 17vw;
+}
+.industry-title-agriculture {
+  left: 15vw;
+}
+.industry-description {
+  font-size: 1.15rem;
+  position: absolute;
+  /*left: 1118px;
+  */
+  font-family: Roboto-Regular;
+  animation: blur 2.5s linear, fadein-with-delay 2.5s linear;
+  top: 18vh;
+  left: 45vw;
+  width: 45vw;
+  -webkit-animation: blur 2.5s linear, fadein-with-delay 2.5s linear;
+}
+
+.industry-watch-btn {
+  width: 19vw;
+  height: 8vh;
+  background: transparent;
+  border: 2px solid #7cfbbf;
+  border-radius: 100px;
+  font-family: Roboto-Regular;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 100;
+  right: 25vw;
+  position: absolute;
+  outline: none;
+  box-shadow: none;
+  animation: blur-element 4s linear, fadein-with-delay 3.5s linear;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  -webkit-animation: blur-element 4s linear, fadein-with-delay 3.5s linear;
+}
+.industry-watch-btn:focus {
+  outline: none;
+}
+.industry-watch-btn-infrastructure {
+  top: 68vh;
+}
+.industry-watch-btn-agriculture {
+  top: 75vh;
+}
+.industry-watch-btn-tourism {
+  top: 67vh;
+}
+.industry-watch-btn-energy {
+  top: 67vh;
+}
+.industry-image {
+  position: absolute;
+  animation: blur-element 2s linear, fadein-with-delay 1.5s linear;
+  /*mask-image: url(../../assets/image-mask.svg);
+  */
+  width: 22.1vw;
+  height: 25vh;
+  left: 15vw;
+  top: 57vh;
+  -webkit-animation: blur-element 2s linear, fadein-with-delay 1.5s linear;
+}
+.modal-container {
+  position: relative;
+}
+.modal-close-btn {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+}
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 1000ms ease-in-out;
+  -webkit-transition: opacity 1000ms ease-in-out;
+  -moz-transition: opacity 1000ms ease-in-out;
+  -ms-transition: opacity 1000ms ease-in-out;
+  -o-transition: opacity 1000ms ease-in-out;
+}
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}

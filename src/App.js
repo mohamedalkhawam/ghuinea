@@ -238,28 +238,28 @@ potentiel incroyables`,
   });
 const history = createBrowserHistory();
 
-const SuspendPinchZoom = ({ children }) => {
-  const ref = useRef(null);
-  // const ref = useRef<HTMLDivElement>(null)
-  useLayoutEffect(() => {
-    const target = ref.current;
-    if (!target) return;
-    const disablePinchZoom = (e) => {
-      if (e.touches.length > 1) {
-        e.preventDefault();
-      }
-    };
-    target.addEventListener("touchmove", disablePinchZoom, { passive: false });
-    return () => {
-      target.removeEventListener("touchmove", disablePinchZoom);
-    };
-  }, []);
-  return (
-    <div ref={ref} className="dd">
-      {children}
-    </div>
-  );
-};
+// const SuspendPinchZoom = ({ children }) => {
+//   const ref = useRef(null);
+//   // const ref = useRef<HTMLDivElement>(null)
+//   useLayoutEffect(() => {
+//     const target = ref.current;
+//     if (!target) return;
+//     const disablePinchZoom = (e) => {
+//       if (e.touches.length > 1) {
+//         e.preventDefault();
+//       }
+//     };
+//     target.addEventListener("touchmove", disablePinchZoom, { passive: false });
+//     return () => {
+//       target.removeEventListener("touchmove", disablePinchZoom);
+//     };
+//   }, []);
+//   return (
+//     <div ref={ref} className="dd">
+//       {children}
+//     </div>
+//   );
+// };
 function App() {
   const [shouldAppWork, setShouldAppWork] = useState(true);
   // useEffect(() => {
@@ -286,48 +286,47 @@ function App() {
   //   }
   // }, [shouldAppWork]);
 
-  if (shouldAppWork) {
-    return (
-      <Provider store={store}>
-        {window.location.pathname !== "/license" && <Background />}
-
-        <SuspendPinchZoom>
-          <Router history={history}>
-            <Switch>
-              <Route path="/about">
-                <About />
-              </Route>
-              <Route path="/invest">
-                <Invest />
-              </Route>
-              <Route path="/industry/:industryName?">
-                <Industy />
-              </Route>
-              <Route path="/" exact>
-                <Home />
-              </Route>
-              <Route path="/license" component={License} />
-            </Switch>
-          </Router>
-        </SuspendPinchZoom>
-      </Provider>
-    );
-  } else {
-    return (
-      <div>
+  // if (shouldAppWork) {
+  return (
+    <Provider store={store}>
+      <Background />
+      <SuspendPinchZoom>
         <Router history={history}>
           <Switch>
-            <Route path="/" exact>
-              <div
-                onClick={() => window.close()}
-                className="w-sreen h-screen "
-              ></div>
+            <Route path="/about">
+              <About />
             </Route>
-            <Route path="/license" component={License} />
+            <Route path="/invest">
+              <Invest />
+            </Route>
+            <Route path="/industry/:industryName?">
+              <Industy />
+            </Route>
+            <Route path="/" exact>
+              <Home />
+            </Route>
+            {/* <Route path="/license" component={License} /> */}
           </Switch>
         </Router>
-      </div>
-    );
-  }
+      </SuspendPinchZoom>
+    </Provider>
+  );
+  // } else {
+  //   return (
+  //     <div>
+  //       <Router history={history}>
+  //         <Switch>
+  //           <Route path="/" exact>
+  //             <div
+  //               onClick={() => window.close()}
+  //               className="w-sreen h-screen "
+  //             ></div>
+  //           </Route>
+  //           <Route path="/license" component={License} />
+  //         </Switch>
+  //       </Router>
+  //     </div>
+  //   );
+  // }
 }
 export default App;

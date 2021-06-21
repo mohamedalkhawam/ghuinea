@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import effect from "../assets/bubble pop.mp3";
 
 const useAudio = () => {
@@ -9,6 +9,7 @@ const useAudio = () => {
 
   useEffect(() => {
     playing ? audio.play() : audio.pause();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [playing]);
 
   useEffect(() => {
@@ -16,7 +17,7 @@ const useAudio = () => {
     return () => {
       audio.removeEventListener("ended", () => setPlaying(false));
     };
-  }, []);
+  }, [audio]);
 
   return [playing, toggle];
 };

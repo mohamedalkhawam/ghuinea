@@ -3,8 +3,9 @@ import investImage from "../assets/invest1.png";
 import houseImage from "../assets/house.png";
 import useAudio from "./useAudio";
 import { goTo } from "../redux/actions";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 const ActionsButtons = ({ path, history }) => {
+  // eslint-disable-next-line no-unused-vars
   const [playing, toggle] = useAudio();
   const dispatch = useDispatch();
   const showInvesBtn = () => {
@@ -19,7 +20,7 @@ const ActionsButtons = ({ path, history }) => {
             }, 200);
           }}
         >
-          <img className="invest-btn" src={investImage} />
+          <img className="invest-btn" src={investImage} alt="" />
           {/*<img className="invest-btn2" src={investImage2}/>*/}
           <p className="invest-btn2">
             READY TO <div className="invest-btn3">INVEST</div>
@@ -41,7 +42,7 @@ const ActionsButtons = ({ path, history }) => {
             }, 200);
           }}
         >
-          <img className="back-btn" src={backImage} />
+          <img className="back-btn" src={backImage} alt="" />
         </div>
 
         {showInvesBtn()}
@@ -54,7 +55,7 @@ const ActionsButtons = ({ path, history }) => {
             }, 200);
           }}
         >
-          <img className="home-btn" src={houseImage} />
+          <img className="home-btn" src={houseImage} alt="" />
         </div>
       </div>
     );

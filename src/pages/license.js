@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import aesjs from "aes-js";
+// import aesjs from "aes-js";
 export default function License(props) {
   const history = useHistory();
   useEffect(() => {

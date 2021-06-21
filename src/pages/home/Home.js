@@ -1,5 +1,5 @@
 import "./Home.css";
-import { Link, useHistory, useLocation } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import homeLogo from "../../assets/logo-home.png";
 import gridImg from "../../assets/grid.png";
 import { useTranslation } from "react-i18next";
@@ -7,6 +7,7 @@ import useAudio from "../../components/useAudio";
 function Home() {
   let history = useHistory();
   let { i18n } = useTranslation();
+  // eslint-disable-next-line no-unused-vars
   const [playing, toggle] = useAudio();
 
   const gotTo = (path, lng) => {

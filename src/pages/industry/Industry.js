@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
-import Modal from "react-modal";
 import useAudio from "../../components/useAudio";
 import "./Industry.css";
 import energyImg from "../../assets/energy.png";
@@ -30,8 +29,9 @@ function Industy() {
   const appReducer = useSelector((state) => state.appReducer);
   const { t } = useTranslation();
   const history = useHistory();
+  // eslint-disable-next-line no-unused-vars
   const [playing, toggle] = useAudio();
-
+  // eslint-disable-next-line no-unused-vars
   const [industries, setIndustries] = useState({
     energy: {
       name: "energy",
@@ -69,6 +69,7 @@ function Industy() {
   const [modalIsOpen, setIsOpen] = useState(false);
   useEffect(() => {
     dispatch(goTo(null));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   function openModal() {
     toggle();
@@ -111,7 +112,7 @@ function Industy() {
             padding: "0px",
             marging: "0px",
             animation: "fadein 2s",
-            "-webkit-animation": "fadein 2s",
+            WebkitAnimation: "fadein 2s",
             position: "fixed",
             zIndex: modalIsOpen ? 1000 : -1000,
             transition: "all 2s",
@@ -129,7 +130,6 @@ function Industy() {
             />
 
             <video id="myVideo1" className=" h-full  w-full video-player  ">
-              <source src={industry.video} type="video/mp4" />
               <source src={industry.video} type="video/mp4" />
             </video>
           </div>

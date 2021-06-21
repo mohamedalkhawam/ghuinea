@@ -1,4 +1,4 @@
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./About.css";
 import gridImg from "../../assets/grid.png";
 import slugImg from "../../assets/logo-slug.png";
@@ -14,6 +14,7 @@ function About() {
 
   useEffect(() => {
     dispatch(goTo(null));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const clickEvent = (route) => {
     toggle();
@@ -24,6 +25,7 @@ function About() {
   };
 
   const history = useHistory();
+  // eslint-disable-next-line no-unused-vars
   const [playing, toggle] = useAudio();
   const { t } = useTranslation();
   return (

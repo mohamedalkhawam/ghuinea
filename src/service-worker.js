@@ -54,8 +54,11 @@ registerRoute(
     url.origin === self.location.origin && url.pathname.endsWith(".png"), // Customize this strategy as needed, e.g., by changing to CacheFirst.
   new StaleWhileRevalidate({
     cacheName: "images",
-    maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
+
     plugins: [
+      new WorkboxPlugin.InjectManifest({
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
+      }),
       // Ensure that once this runtime cache reaches a maximum size the
       // least-recently used images are removed.
       new ExpirationPlugin({ maxEntries: 50000000 }),

@@ -2,21 +2,20 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect,
+  // Redirect,
 } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import "./App.css";
-import { BsFullscreen } from "react-icons/bs";
 import Home from "./pages/home/Home";
 import Invest from "./pages/invest/Invest";
 import Industy from "./pages/industry/Industry";
 import About from "./pages/about/About";
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React from "react";
 import store from "./redux/store";
 import { Provider } from "react-redux";
 import i18n from "i18next";
-import License from "./pages/license";
-import aesjs from "aes-js";
+// import License from "./pages/license";
+// import aesjs from "aes-js";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 import Background from "./components/animatedbg";
@@ -261,7 +260,7 @@ const history = createBrowserHistory();
 //   );
 // };
 function App() {
-  const [shouldAppWork, setShouldAppWork] = useState(true);
+  // const [shouldAppWork, setShouldAppWork] = useState(true);
   // useEffect(() => {
   //   if (window.localStorage.getItem("date") !== null) {
   //     const encodedDate = window.localStorage.getItem("date");

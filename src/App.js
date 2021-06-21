@@ -290,25 +290,22 @@ function App() {
   return (
     <Provider store={store}>
       <Background />
-      <SuspendPinchZoom>
-        <Router history={history}>
-          <Switch>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/invest">
-              <Invest />
-            </Route>
-            <Route path="/industry/:industryName?">
-              <Industy />
-            </Route>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            {/* <Route path="/license" component={License} /> */}
-          </Switch>
-        </Router>
-      </SuspendPinchZoom>
+      <Router history={history}>
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/invest">
+            <Invest />
+          </Route>
+          <Route path="/industry/:industryName?">
+            <Industy />
+          </Route>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
     </Provider>
   );
   // } else {

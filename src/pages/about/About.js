@@ -2,7 +2,7 @@ import { useHistory } from "react-router-dom";
 import "./About.css";
 import gridImg from "../../assets/grid.png";
 import slugImg from "../../assets/logo-slug.png";
-
+import ActionsButtons from "../../components/ActionsButtons";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import useAudio from "../../components/useAudio";
@@ -35,7 +35,7 @@ function About() {
           appReducer.goTo !== null ? `fade-out-element anim ` : ``
         } `}
       >
-        {/* <ActionsButtons path="/about" history={history}></ActionsButtons> */}
+        <ActionsButtons path="/about" history={history}></ActionsButtons>
         <img className="about-grid w-28 top-10" src={gridImg} alt="" />
         <img className="logo-slug" src={slugImg} alt="" />
         <div

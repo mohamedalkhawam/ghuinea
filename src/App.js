@@ -16,7 +16,10 @@ import ActionsButtons from "./components/ActionsButtons";
 const history = createBrowserHistory();
 
 function App() {
-  const [updateHistory, setUpdatedHistory] = useState(history);
+  const [path, setPath] = useState(history.location.pathname);
+  useEffect(() => {
+    setPath(history.location.pathname);
+  }, [history.location.pathname]);
   // const [shouldAppWork, setShouldAppWork] = useState(true);
   // useEffect(() => {
   //   if (window.localStorage.getItem("date") !== null) {
@@ -46,9 +49,12 @@ function App() {
   return (
     <Provider store={store}>
       <Background />
-      <ActionsButtons history={history} />
+      {/* <ActionsButtons history={history} path={path} /> */}
       <Router history={history}>
         <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
           <Route path="/about">
             <About />
           </Route>
@@ -57,9 +63,6 @@ function App() {
           </Route>
           <Route path="/industry/:industryName?">
             <Industy />
-          </Route>
-          <Route path="/" exact>
-            <Home />
           </Route>
         </Switch>
       </Router>

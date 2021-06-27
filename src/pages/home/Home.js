@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import homeLogo from "../../assets/logo-home.png";
 import gridImg from "../../assets/grid.png";
 import { useTranslation } from "react-i18next";
+import ActionsButtons from "../../components/ActionsButtons";
 import useAudio from "../../components/useAudio";
 function Home() {
   let history = useHistory();
@@ -17,6 +18,7 @@ function Home() {
 
   return (
     <div className="home w-screen h-screen overflow-hidden  dd" id="ra">
+      <ActionsButtons path="/"></ActionsButtons>
       <img
         className="absolute  top-0 left-0 home-logo w-3/5 h-2/5"
         alt=""

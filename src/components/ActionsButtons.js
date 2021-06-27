@@ -3,9 +3,15 @@ import investImage from "../assets/invest1.png";
 import houseImage from "../assets/house.png";
 import useAudio from "./useAudio";
 import { goTo } from "../redux/actions";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import React, { useState, useEffect } from "react";
 const ActionsButtons = ({ path, history }) => {
+  const appReducer = useSelector((state) => state.appReducer);
   // eslint-disable-next-line no-unused-vars
+  const [currentPath, setPath] = useState(path);
+  useEffect(() => {
+    setPath(path);
+  }, [path]);
   const [playing, toggle] = useAudio();
   const dispatch = useDispatch();
   const showInvesBtn = () => {

@@ -8,12 +8,6 @@ export default function AnimatedBg(industry) {
   return (
     <div className="w-screen h-screen  overflow-hidden dd">
       <video
-        style={{
-          width: `2560px`,
-          height: `1600px`,
-          top: `-${(1600 - window.innerHeight) / 2}px`,
-          backgroundSize: "contain",
-        }}
         autoPlay
         loop
         muted

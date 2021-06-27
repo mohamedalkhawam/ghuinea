@@ -8,7 +8,7 @@ import agricultureImg from "../../assets/agriculture.png";
 import infrastructureImg from "../../assets/infrastructure.png";
 import gridImg from "../../assets/grid.png";
 import slugImg from "../../assets/logo-slug.png";
-// import ActionsButtons from "../../components/ActionsButtons";
+import ActionsButtons from "../../components/ActionsButtons";
 import { useTranslation } from "react-i18next";
 import linesImg from "../../assets/industry-lines.png";
 import energyVideoEnglish from "../../assets/energy_English.mp4";
@@ -91,6 +91,7 @@ function Industy() {
   }
   return (
     <>
+      <ActionsButtons path="/industry"></ActionsButtons>
       <div
         className={`industry overflow-hidden dd ${
           appReducer.goTo !== null ? `fade-out-element anim ` : ``

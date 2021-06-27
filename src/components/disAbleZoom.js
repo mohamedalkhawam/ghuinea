@@ -1,7 +1,6 @@
 import React, { useRef, useLayoutEffect } from "react";
 export const SuspendPinchZoom = ({ children }) => {
   const ref = useRef(null);
-
   useLayoutEffect(() => {
     const target = ref.current;
     if (!target) return;

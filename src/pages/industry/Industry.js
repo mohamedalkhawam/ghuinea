@@ -8,7 +8,7 @@ import agricultureImg from "../../assets/agriculture.png";
 import infrastructureImg from "../../assets/infrastructure.png";
 import gridImg from "../../assets/grid.png";
 import slugImg from "../../assets/logo-slug.png";
-import ActionsButtons from "../../components/ActionsButtons";
+// import ActionsButtons from "../../components/ActionsButtons";
 import { useTranslation } from "react-i18next";
 import linesImg from "../../assets/industry-lines.png";
 import energyVideoEnglish from "../../assets/energy_English.mp4";
@@ -28,11 +28,10 @@ function Industy() {
   const dispatch = useDispatch();
   const appReducer = useSelector((state) => state.appReducer);
   const { t } = useTranslation();
-  const history = useHistory();
   // eslint-disable-next-line no-unused-vars
   const [playing, toggle] = useAudio();
   // eslint-disable-next-line no-unused-vars
-  const [industries, setIndustries] = useState({
+  const industries = {
     energy: {
       name: "energy",
       description: "energyDescription",
@@ -63,7 +62,7 @@ function Industy() {
           ? agricultureVideoEnglish
           : agricultureVideoFrensh,
     },
-  });
+  };
   const { industryName } = useParams();
   const industry = industries[industryName];
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -97,7 +96,6 @@ function Industy() {
           appReducer.goTo !== null ? `fade-out-element anim ` : ``
         } `}
       >
-        <ActionsButtons path="/industry" history={history}></ActionsButtons>
         <div
           style={{
             top: "50%",

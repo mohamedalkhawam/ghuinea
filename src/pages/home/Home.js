@@ -34,7 +34,7 @@ function Home() {
         <button
           className="home-lang-button font-thin px-14 py-4"
           onClick={() => {
-            toggle();
+            // toggle();
             setTimeout(() => {
               gotTo("/about", "en");
             }, 1);
@@ -47,7 +47,7 @@ function Home() {
         <button
           className=" home-lang-button-fr font-thin px-14 py-4"
           onClick={() => {
-            toggle();
+            // toggle();
             setTimeout(() => {
               gotTo("/about", "fr");
             }, 1);

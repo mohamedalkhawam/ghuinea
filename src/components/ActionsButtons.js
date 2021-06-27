@@ -14,7 +14,7 @@ const ActionsButtons = ({ path, history }) => {
         <div
           onClick={() => {
             dispatch(goTo("/invest/"));
-            toggle();
+            // toggle();
             setTimeout(() => {
               history.push("/invest/");
             }, 200);
@@ -22,9 +22,9 @@ const ActionsButtons = ({ path, history }) => {
         >
           <img className="invest-btn" src={investImage} alt="" />
           {/*<img className="invest-btn2" src={investImage2}/>*/}
-          <p className="invest-btn2">
+          <div className="invest-btn2">
             READY TO <div className="invest-btn3">INVEST</div>
-          </p>
+          </div>
         </div>
       );
     return null;
@@ -36,7 +36,7 @@ const ActionsButtons = ({ path, history }) => {
         <div
           onClick={() => {
             dispatch(goTo("back"));
-            toggle();
+            // toggle();
             setTimeout(() => {
               history.goBack();
             }, 200);
@@ -48,7 +48,7 @@ const ActionsButtons = ({ path, history }) => {
         {showInvesBtn()}
         <div
           onClick={() => {
-            toggle();
+            // toggle();
             dispatch(goTo("/"));
             setTimeout(() => {
               history.push("/");

@@ -1,12 +1,28 @@
 import Bubble from "../assets/bubble.png";
+import video from "../assets/bg.mp4";
 export default function AnimatedBg(industry) {
   const arr1 = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
   ];
 
   return (
-    <div className="w-screen h-screen  overflow-hidden bg">
-      {arr1.map((item, index) => (
+    <div className="w-screen h-screen  overflow-hidden dd">
+      <video
+        style={{
+          width: `2560px`,
+          height: `1600px`,
+          top: `-${(1600 - window.innerHeight) / 2}px`,
+          backgroundSize: "contain",
+        }}
+        autoPlay
+        loop
+        muted
+        id="myVideo"
+        className=" h-screen  w-screen fixed   z-0 "
+      >
+        <source src={video} type="video/mp4" />
+      </video>
+      {/* {arr1.map((item, index) => (
         <img
           key={index}
           style={{
@@ -56,7 +72,7 @@ export default function AnimatedBg(industry) {
           src={Bubble}
           className={`w-4 absolute left-80 bottom-52 opacity-80 `}
         />
-      ))}
+      ))} */}
       {/* {arr1.map((item, index) => (
         <img
           style={{
